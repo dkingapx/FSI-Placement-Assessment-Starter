@@ -70,7 +70,7 @@ let sugMinBtn = document.querySelector('#minus-sugar')
 sugMinBtn.addEventListener('click', function () {
     //console.log(sugMinBtn)
     if (ssCount > 0) {
-        ssCount = count - 1
+        ssCount = ssCount - 1
         allCount = allCount -1;
     }
     sugQty.textContent = ssCount
