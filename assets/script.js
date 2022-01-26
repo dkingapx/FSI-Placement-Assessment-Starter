@@ -7,10 +7,14 @@ let yourName = "Danielle King" // HINT: Replace this with your own name!
 
 
 // We'll use these variables to track the counts of each cookie type
-let count = 1
+let gbCount = 0
+let ccCount = 0
+let ssCount = 0
+let allCount = 0
 let ginQty = document.querySelector('#qty-gb')
 let ccQty = document.querySelector('#qty-cc') 
 let sugQty = document.querySelector('#qty-sugar')
+let allQty = document.querySelector('#qty-total')
 
 // selecting the element with an id of credit
 const credit = document.querySelector('#credit')
@@ -20,48 +24,59 @@ credit.textContent = 'credit: Danielle King';
 // Event listener for clicks on the "+" button for Gingerbread cookies
 let gbPlusBtn = document.querySelector('#add-gb')
 gbPlusBtn.addEventListener('click', function () {
-    //console.log(gbPlusBtn+ 1 )
-     count = parseInt(count + 1)
-     ginQty.textContent = count;
+     gbCount = parseInt(gbCount + 1)
+     allCount = parseInt(allCount + 1)
+     ginQty.textContent = gbCount
+     allQty.textContent= allCount;   
 });
 let gbMinBtn = document.querySelector('#minus-gb')
 gbMinBtn.addEventListener('click', function () {
     //console.log(gbMinBtn)
-    if (count > 0) {
-        count = count - 1;
+    if (gbCount > 0) {
+        gbCount = gbCount - 1
+        allCount = allCount -1;
     }
-     ginQty.textContent = count;
+     ginQty.textContent = gbCount
+     allQty.textContent= allCount;
 });
 let ccPlusBtn = document.querySelector('#add-cc')
 ccPlusBtn.addEventListener('click', function () {
     //console.log(ccPlusBtn+ 1 )
-     count = parseInt(count + 1) 
-     ccQty.textContent = count;
+     ccCount = parseInt(ccCount + 1) 
+     allCount = parseInt(allCount + 1)
+     ccQty.textContent = ccCount
+     allQty.textContent= allCount;
+
 });
 let ccMinBtn = document.querySelector('#minus-cc')
 ccMinBtn.addEventListener('click', function () {
     //console.log(ccMinBtn)
-    if (count > 0) {
-        count = count - 1;
+    if (ccCount > 0) {
+        ccCount = ccCount - 1
+        allCount = allCount -1;
     }
-     ccQty.textContent = count;
+     ccQty.textContent = ccCount
+     allQty.textContent= allCount;
 });
 let sugPlusBtn = document.querySelector('#add-sugar')
 sugPlusBtn.addEventListener('click', function () {
     //console.log(sugPlusBtn+ 1 )
-     count = parseInt(count + 1)
-     sugQty.textContent = count;
+     ssCount = parseInt(ssCount + 1)
+     allCount = parseInt(allCount + 1)
+     sugQty.textContent = ssCount
+     allQty.textContent= allCount;
 });
 let sugMinBtn = document.querySelector('#minus-sugar')
 sugMinBtn.addEventListener('click', function () {
     //console.log(sugMinBtn)
-    if (count > 0) {
-        count = count - 1;
+    if (ssCount > 0) {
+        ssCount = count - 1
+        allCount = allCount -1;
     }
-    sugQty.textContent = count;
-});
-let allTotal = document.querySelector('#qty-total')
-for(let i = 0;)
+    sugQty.textContent = ssCount
+    allQty.textContent= allCount;
+})
+//let allTotal = 
 
 
 // TODO: Hook up event listeners for the rest of the buttons
