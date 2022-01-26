@@ -76,7 +76,3 @@ sugMinBtn.addEventListener('click', function () {
     sugQty.textContent = ssCount
     allQty.textContent= allCount;
 })
-//let allTotal = 
-
-
-// TODO: Hook up event listeners for the rest of the buttons
